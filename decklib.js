@@ -1,4 +1,4 @@
-class Deck {
+module.exports = class Deck {
     constructor() {
         this.deck = [];
         this.dealt_cards = [];
@@ -49,12 +49,18 @@ class Deck {
         this.dealt_cards.push(dealt_card);
         return dealt_card;
     }
+
+    replace() {
+        this.deck.unshift(this.dealt_cards.shift());
+    }
+
+    clear_deck() {
+        this.deck = [];
+    }
 }
 
 deck = new Deck();
 
 deck.generate_deck();
-
 deck.shuffle();
-
-console.log(deck.deal());
+deck.print_deck();
