@@ -1,7 +1,7 @@
 class Deck {
     constructor() {
         this.deck = [];
-        thisresult_cards = [];
+        this.dealt_cards = [];
 
     }
 
@@ -23,4 +23,32 @@ class Deck {
             }
         }
     }
+    print_deck() {
+        if (this.deck.length == 0) {
+            console.log('This deck has been generated');
+        } else {
+            for (let c = 0; c < this.deck.length; c++) {
+                console.log(this.deck[c]);
+            }
+        }
+    }
+    shuffle() {
+        let current_ind = this.deck.length, temp_val, rand_ind
+
+        while (0 != current_ind) {
+            rand_ind = Math.floor(Math.random() * current_ind);
+            current_ind -= 1;
+            temp_val = this.deck[current_ind];
+            this.deck[current_ind] = this.deck[rand_ind];
+            this.deck[rand_ind] = temp_val;
+        };
+    }
 }
+
+deck = new Deck();
+
+deck.generate_deck();
+deck.print_deck();
+deck.shuffle();
+deck.print_deck();
+
