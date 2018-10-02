@@ -1,0 +1,49 @@
+body {
+    background: #009900;
+}
+
+.card-container {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+.card {
+    height: 350px;
+    width: 250px;
+    border: 2px solid grey;
+    border-radius: 12.5px;
+    background: white;
+    color: red;
+    box-shadow: 2px 2px 1px #2f4f4f;
+}
+
+.value-container {
+    width: 55px;
+    position: absolute;
+}
+
+.container-top {
+    top: 25px;
+    left: 30px;
+}
+
+.container-bottom {
+    bottom: 25px;
+    right: 30px;
+    transform: rotate(180deg);
+}
+
+.value-number, .value-suit {
+    font-size: 48px;
+}
+
+.value-number {
+    font-family: monospace slab-serif;
+    font-size: 48px;
+}
+
+.value-suit {
+    position: absolute;
+    right: 0px;
+}
